@@ -1,9 +1,694 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LanDoor - Premium Hidden Doors for European Markets</title>
+    <title>LANDOOR - Premium Hidden Doors</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .hero-section {
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(to right, #f8f8f8 0%, #f0f0f0 100%);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .text-content {
+            padding-left: 40px;
+        }
+
+        .logo-accent {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #ffebeb 0%, #ffe0e0 100%);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo-accent::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 30px;
+            height: 30px;
+            background: #ff4444;
+            border-radius: 10px 0 0 0;
+            opacity: 0.3;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 30px;
+        }
+
+        h1 .premium {
+            color: #000;
+        }
+
+        h1 .hidden-doors {
+            color: #e53935;
+            display: block;
+        }
+
+        h1 .markets {
+            color: #000;
+            display: block;
+        }
+
+        .description {
+            font-size: 1.125rem;
+            line-height: 1.7;
+            color: #666;
+            margin-bottom: 40px;
+            max-width: 500px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+        }
+
+        .btn {
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: #e53935;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #c62828;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(229, 57, 53, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: #2c2c2c;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: #000;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .tagline {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #999;
+            font-weight: 500;
+        }
+
+        .image-content {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            height: 600px;
+        }
+
+        .door-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: relative;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .text-content {
+                padding-left: 20px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-buttons {
+                justify-content: center;
+            }
+
+            .image-content {
+                height: 500px;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero-section {
+                padding: 20px;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .image-content {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="text-content">
+                    <div class="logo-accent"></div>
+                    <h1>
+                        <span class="premium">Premium</span>
+                        <span class="hidden-doors">Hidden Doors</span>
+                        <span class="markets">for European Markets</span>
+                    </h1>
+                    <p class="description">
+                        Ukrainian manufacturer delivering architectural innovation to Europe. Hiqh-quality products, reliable supply chains, and dedicated partnership support for distributors and construction professionals.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-primary">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/>
+                            </svg>
+                            Become a Partner
+                        </a>
+                        <a href="https://drive.google.com/file/d/14amzg3dqdMQdWNypfgetNqJkA6NKUdrH/view?usp=sharing" target="_blank" class="btn btn-secondary">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 9h-4V3H9v6H5l7 7 7-7zm-7 4.17L9.83 11H11V5h2v6h1.17L12 13.17zM5 18v2h14v-2H5z" fill="currentColor"/>
+                            </svg>
+                            Download Product Catalog
+                        </a>
+                    </div>
+                    <p class="tagline">Crafted in Ukraine. Trusted in Europe.</p>
+                </div>
+                <div class="image-content">
+                    <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXf2KiLWxqor1lR0TyinT6KwEpcw9QFsCEPd-XaQB-DWfNznMvXNKTGOHYwK10YNyGxK280jIRvnRycFSiu6c9RrF4IKXHaiDtcs8oGnLEknFjyyBQw0rcwsYEelyMwfp_XWdxBz?key=bVsfZJNyHhee28LDRRqSZg" alt="Premium Hidden Door" class="door-image">
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+<!-- Block 2 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manufacturing Excellence - LanDoor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        .excellence-section {
+            padding: 100px 20px;
+            background-color: #fafafa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 800;
+            color: #000;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .section-subtitle {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid #f0f0f0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #e53935 0%, #ff6b6b 100%);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .icon-wrapper {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #e53935 0%, #ff6b6b 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            position: relative;
+        }
+
+        .icon-wrapper svg {
+            width: 40px;
+            height: 40px;
+            color: white;
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        .feature-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .accent-decoration {
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 150px;
+            height: 150การ;
+            background: linear-gradient(135deg, #ffebeb 0%, #ffe0e0 100%);
+            border-radius: 50%;
+            opacity: 0.3;
+            z-index: 0;
+        }
+
+        @media (max-width: 768px) {
+            .excellence-section {
+                padding: 60px 20px;
+            }
+
+            .section-header {
+                margin-bottom: 50px;
+            }
+
+            .features-grid {
+                gap: 30px;
+                margin-bottom: 50px;
+            }
+
+            .feature-card {
+                padding: 30px;
+            }
+
+            .icon-wrapper {
+                width: 70px;
+                height: 70px;
+                margin-bottom: 20px;
+            }
+
+            .icon-wrapper svg {
+                width: 35px;
+                height: 35px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="excellence-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Manufacturing Excellence Since 2009</h2>
+                <p class="section-subtitle">
+                    Over 15 years of precision manufacturing in Ukraine, delivering premium hidden door solutions 
+                    to European markets with unwavering quality standards and export expertise.
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="accent-decoration"></div>
+                    <div class="icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 11H7V13H9V11ZM13 11H11V13H13V11ZM17 11H15V13H17V11ZM19 4H18V2H16V4H8V2H6V4H5C3.89 4 3.01 4.9 3.01 6L3 20C3 21.1 3.89 22 5 22H19C20.1 22 21 21.1 21 20V6C21 4.9 20.1 4 19 4ZM19 20H5V9H19V20Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">15+ Years Market Experience</h3>
+                    <p class="feature-description">
+                        Established in 2009, serving premium segment with consistent innovation and reliability in hidden door manufacturing.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 3H14.82C14.4 1.84 13.3 1 12 1C10.7 1 9.6 1.84 9.18 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM12 3C12.55 3 13 3.45 13 4C13 4.55 12.55 5 12 5C11.45 5 11 4.55 11 4C11 3.45 11.45 3 12 3ZM10 17L6 13L7.41 11.59L10 14.17L16.59 7.58L18 9L10 17Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Thousands Premium Projects Delivered</h3>
+                    <p class="feature-description">
+                        Trusted by architects and developers across Europe for luxury residential, hospitality, and commercial hidden door installations.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 6H16V4C16 2.89 15.11 2 14 2H10C8.89 2 8 2.89 8 4V6H4C2.89 6 2.01 6.89 2.01 8L2 19C2 20.11 2.89 21 4 21H20C21.11 21 22 20.11 22 19V8C22 6.89 21.11 6 20 6ZM10 4H14V6H10V4ZM20 19H4V8H20V19ZM8 13.5C8 14.33 8.67 15 9.5 15S11 14.33 11 13.5S10.33 12 9.5 12S8 12.67 8 13.5ZM13 13.5C13 14.33 13.67 15 14.5 15S16 14.33 16 13.5S15.33 12 14.5 12S13 12.67 13 13.5Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Dedicated Export Support Team</h3>
+                    <p class="feature-description">
+                        English-speaking specialists managing documentation, customs, and technical support for seamless European market operations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+<!-- Block 3 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Projects Portfolio - LanDoor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            background-color: #fafafa;
+            color: #333;
+        }
+
+        .portfolio-section {
+            padding: 80px 20px;
+            background-color: #fafafa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .section-subtitle {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 180px);
+            gap: 12px;
+            margin-bottom: 50px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .project-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            background-color: #e8e8e8;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        /* Grid positioning exactly matching the screenshot */
+        .project-item:nth-child(1) {
+            grid-column: 1;
+            grid-row: 1 / 3;
+        }
+
+        .project-item:nth-child(2) {
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        .project-item:nth-child(3) {
+            grid-column: 3;
+            grid-row: 1;
+        }
+
+        .project-item:nth-child(4) {
+            grid-column: 4;
+            grid-row: 1 / 3;
+        }
+
+        .project-item:nth-child(5) {
+            grid-column: 2 / 4;
+            grid-row: 2;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .project-item:hover .project-image {
+            transform: scale(1.08);
+        }
+
+        .project-item:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        @media (max-width: 1024px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(4, 180px);
+            }
+
+            .project-item:nth-child(5) {
+                grid-column: span 2;
+            }
+
+            .project-item:nth-child(6) {
+                grid-column: 3;
+                grid-row: 2;
+            }
+
+            .project-item:nth-child(7) {
+                grid-column: 1;
+                grid-row: 3;
+            }
+
+            .project-item:nth-child(8) {
+                grid-column: 2 / span 2;
+                grid-row: 3;
+            }
+
+            .project-item:nth-child(9) {
+                grid-column: 1 / span 3;
+                grid-row: 4;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+                gap: 10px;
+            }
+
+            .project-item {
+                grid-column: span 1 !important;
+                grid-row: span 1 !important;
+                height: 200px;
+            }
+
+            .project-item:nth-child(1),
+            .project-item:nth-child(5),
+            .project-item:nth-child(9) {
+                grid-column: span 2 !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .portfolio-section {
+                padding: 50px 15px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .project-item {
+                grid-column: span 1 !important;
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="portfolio-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Premium Projects Portfolio</h2>
+                <p class="section-subtitle">
+                    Exceptional hidden door installations across Europe's most prestigious residential and commercial spaces, showcasing our commitment to seamless integration, superior craftsmanship, and innovative architectural solutions across diverse environments.
+                </p>
+            </div>
+
+            <div class="portfolio-grid">
+                <div class="project-item">
+                    <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXc6i3XarzM6VFKz9S7Kecz2qVNBclfdIqEFuvS9gGKBODcJT6UaL_TFEYiUWBL1er5SwkKLXhNgtWhcpNyzFFDkSyXvLq8SeLTAbMUs9a6uuJTMpKj3K0v7-9PnLBTFCELirki9?key=8TjZQuUu3R01cnY0MuU6Nw" alt="Hidden door installation" class="project-image">
+                </div>
+
+                <div class="project-item">
+                    <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXe8bhfFr0M_W7UIRzDzV4Ow7vjNStDPNKBGSJ3woU8so0z8Bh5rO8JInukapajuhpKeLlQibYUzpRZiMuXgd7_-YdEr4gKoZEifwiUIDzjzlkr2Xkw6m4aV8F6m3zDZ_S1VM0xL?key=8TjZQuUu3R01cnY0MuU6Nw" alt="Hidden door installation" class="project-image">
+                </div>
+
+                <div class="project-item">
+                    <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXf8g92TSYY_YjlRhRDzwUcpVeSKdo-kJ5IgTr-9SQf6IYLsQj_6xwllJBQ6Fz8FqYe2e3BCmE82fOOx0eH0DzdwwMiZC3LulGoLZlEKfe8QEBpOLdSz_tfShIv98FcPrBQvSo51?key=8TjZQuUu3R01cnY0MuU6Nw" alt="Hidden door installation" class="project-image">
+                </div>
+
+                <div class="project-item">
+                    <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXe3u6sPyseu6INBsb2Yg_F92zLSJYVT5bndZYp33PQVvhfb5LIqd_NGl_si0YrOgbAL29ov4MlSBcgJwnvwjjnSS5u6L9y2uyLXV-KQ_ntD14yHzHijaoeaOb9gPSGV7S1Nepgm?key=8TjZQuUu3R01cnY0MuU6Nw" alt="Hidden door installation" class="project-image">
+                </div>
+
+                <div class="project-item">
+                    <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdy5HJ4Je9DKp_WIuyW_R6_aqHR2hOFjlF3QTHcGKErS5aBV4AEIgw0FaFZRGGXvmwvxE7D_Z1bggDsWplSZ8wiBV-_NxBKIZelswjhfjWxgganZqquxHbNbXBXY9mzuzMxJSg_?key=8TjZQuUu3R01cnY0MuU6Nw" alt="Hidden door installation" class="project-image">
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+<!-- Block 4 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Manufacturing Excellence</title>
     <style>
         * {
             margin: 0;
@@ -13,924 +698,484 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
+            background-color: #f8f9fa;
             color: #333;
-            background-color: #f5f5f5;
+            line-height: 1.6;
         }
 
-        .hero-section {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .hero-content {
-            z-index: 2;
-            animation: fadeInLeft 1s ease-out;
-        }
-
-        .logo-placeholder {
-            width: 80px;
-            height: 80px;
-            background-color: #f0d0d0;
-            border-radius: 20px;
-            margin-bottom: 40px;
-            opacity: 0.8;
-            animation: pulse 2s infinite;
-        }
-
-        h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 30px;
-            color: #1a1a1a;
-        }
-
-        h1 .highlight {
-            color: #dc2626;
-            position: relative;
-        }
-
-        .subtitle {
-            font-size: 1.25rem;
-            color: #666;
-            margin-bottom: 40px;
-            line-height: 1.7;
-            max-width: 500px;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-bottom: 50px;
-        }
-
-        .btn {
-            padding: 16px 32px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            cursor: pointer;
-            border: none;
-        }
-
-        .btn-primary {
-            background-color: #dc2626;
-            color: white;
-            box-shadow: 0 4px 20px rgba(220, 38, 38, 0.3);
-        }
-
-        .btn-primary:hover {
-            background-color: #b91c1c;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 30px rgba(220, 38, 38, 0.4);
-        }
-
-        .btn-secondary {
-            background-color: #1a1a1a;
-            color: white;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn-secondary:hover {
-            background-color: #333;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .tagline {
-            font-size: 0.875rem;
-            color: #888;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 500;
-        }
-
-        .hero-image {
-            position: relative;
-            animation: fadeInRight 1s ease-out;
-        }
-
-        .image-container {
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-            background-color: #ddd;
-            aspect-ratio: 4/3;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-image: url('https://lh7-rt.googleusercontent.com/docsz/AD_4nXdONHmkafcWFemW9TlPZVldw8nUFsoSkHSSDD_A5K_rQBhJ4TPupdM5wP26A7Ft2IGwsVhYwWdn_mt76H0t09b4ldYC3mjlaOdqf0KfTHsmYcZb3_7S8QZz7iipMC9uqx-rEt4?key=8TjZQuUu3R01cnY0MuU6Nw');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        .ce-badge {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background-color: white;
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            animation: slideIn 1s ease-out 0.5s both;
-        }
-
-        @keyframes fadeInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes fadeInRight {
-            from {
-                opacity: 0;
-                transform: translateX(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                opacity: 0.8;
-            }
-            50% {
-                opacity: 0.6;
-            }
-        }
-
-        @media (max-width: 968px) {
-            .hero-container {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .hero-content {
-                text-align: center;
-            }
-
-            .logo-placeholder {
-                margin: 0 auto 30px;
-            }
-
-            .subtitle {
-                margin: 0 auto 40px;
-            }
-
-            .cta-buttons {
-                justify-content: center;
-            }
-
-            .hero-image {
-                max-width: 600px;
-                margin: 0 auto;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .cta-buttons {
-                flex-direction: column;
-                width: 100%;
-            }
-
-            .btn {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .locations-badge {
-                font-size: 0.75rem;
-                padding: 10px 16px;
-            }
-        }
-
-        /* Excellence Section Styles */
-        .excellence-section {
-            padding: 100px 20px;
-            background-color: #fafafa;
-            position: relative;
-        }
-
-        .excellence-container {
+        .container {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 60px 20px;
         }
 
-        .excellence-header {
+        .header {
             text-align: center;
             margin-bottom: 80px;
-            animation: fadeInUp 0.8s ease-out;
         }
 
-        .excellence-header h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 800;
-            color: #1a1a1a;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        .excellence-subtitle {
-            font-size: 1.125rem;
-            color: #666;
-            line-height: 1.8;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-        }
-
-        .stat-card {
-            background: white;
-            padding: 40px 35px;
-            border-radius: 16px;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
-            transition: all 0.3s ease;
-            animation: fadeInUp 0.8s ease-out;
-            animation-fill-mode: both;
-            position: relative;
-            overflow: hidden;
-            border: 2px solid transparent;
-        }
-
-        .stat-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: #dc2626;
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.6s ease;
-        }
-
-        .stat-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .stat-card:nth-child(1) { animation-delay: 0.1s; }
-        .stat-card:nth-child(2) { animation-delay: 0.2s; }
-        .stat-card:nth-child(3) { animation-delay: 0.3s; }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-            border-color: #dc2626;
-        }
-
-        .stat-icon {
-            width: 56px;
-            height: 56px;
-            background-color: #dc2626;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 24px;
-            color: white;
-        }
-
-        .stat-card h3 {
-            font-size: 1.25rem;
+        .header h1 {
+            font-size: 2.75rem;
             font-weight: 700;
             color: #1a1a1a;
-            margin-bottom: 12px;
-            line-height: 1.3;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
         }
 
-        .stat-card p {
-            font-size: 0.95rem;
-            color: #666;
-            line-height: 1.6;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .excellence-section {
-                padding: 60px 20px;
-            }
-
-            .excellence-header {
-                margin-bottom: 50px;
-            }
-
-            .stats-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .stat-card {
-                padding: 30px 25px;
-            }
-        }
-
-        /* Portfolio Section Styles */
-        .portfolio-section {
-            padding: 100px 20px;
-            background-color: white;
-        }
-
-        .portfolio-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .portfolio-header {
-            text-align: center;
-            margin-bottom: 80px;
-            animation: fadeInUp 0.8s ease-out;
-        }
-
-        .portfolio-header h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 800;
-            color: #1a1a1a;
-            margin-bottom: 30px;
-            line-height: 1.2;
-        }
-
-        .portfolio-subtitle {
+        .header p {
             font-size: 1.125rem;
-            color: #666;
-            line-height: 1.8;
-            max-width: 900px;
+            color: #6b7280;
+            max-width: 700px;
             margin: 0 auto;
+            line-height: 1.7;
         }
 
-        .portfolio-grid {
+        .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            grid-auto-flow: dense;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
         }
 
-        .portfolio-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 20px;
-            background-color: #f0f0f0;
-            cursor: pointer;
-            transition: all 0.4s ease;
-            animation: fadeInUp 0.8s ease-out;
-            animation-fill-mode: both;
-        }
-
-        .portfolio-item:nth-child(1) { animation-delay: 0.1s; }
-        .portfolio-item:nth-child(2) { animation-delay: 0.15s; }
-        .portfolio-item:nth-child(3) { animation-delay: 0.2s; }
-        .portfolio-item:nth-child(4) { animation-delay: 0.25s; }
-        .portfolio-item:nth-child(5) { animation-delay: 0.3s; }
-        .portfolio-item:nth-child(6) { animation-delay: 0.35s; }
-        .portfolio-item:nth-child(7) { animation-delay: 0.4s; }
-        .portfolio-item:nth-child(8) { animation-delay: 0.45s; }
-        .portfolio-item:nth-child(9) { animation-delay: 0.5s; }
-
-        .portfolio-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.6s ease;
-        }
-
-        .portfolio-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .portfolio-item:hover img {
-            transform: scale(1.05);
-        }
-
-        /* Grid variations */
-        .portfolio-item.tall {
-            grid-row: span 2;
-        }
-
-        .portfolio-item.wide {
-            grid-column: span 2;
-        }
-
-        /* Responsive grid adjustments */
-        @media (min-width: 768px) {
-            .portfolio-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        @media (min-width: 1200px) {
-            .portfolio-grid {
-                grid-template-columns: repeat(4, 1fr);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .portfolio-section {
-                padding: 60px 20px;
-            }
-
-            .portfolio-header {
-                margin-bottom: 50px;
-            }
-
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-
-            .portfolio-item.tall,
-            .portfolio-item.wide {
-                grid-row: span 1;
-                grid-column: span 1;
-            }
-        }
-
-        /* Manufacturing Section Styles */
-        .manufacturing-section {
-            padding: 100px 20px;
-            background-color: #fafafa;
-        }
-
-        .manufacturing-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .manufacturing-header {
-            text-align: center;
-            margin-bottom: 80px;
-            animation: fadeInUp 0.8s ease-out;
-        }
-
-        .manufacturing-header h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 800;
-            color: #1a1a1a;
-            margin-bottom: 30px;
-            line-height: 1.2;
-        }
-
-        .manufacturing-subtitle {
-            font-size: 1.125rem;
-            color: #666;
-            line-height: 1.8;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .manufacturing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .manufacturing-card {
+        .feature-card {
             background: white;
-            padding: 40px 35px;
             border-radius: 16px;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
-            transition: all 0.3s ease;
-            animation: fadeInUp 0.8s ease-out;
-            animation-fill-mode: both;
-            position: relative;
-            overflow: hidden;
+            padding: 40px 32px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #f1f5f9;
         }
 
-        .manufacturing-card:nth-child(1) { animation-delay: 0.1s; }
-        .manufacturing-card:nth-child(2) { animation-delay: 0.2s; }
-        .manufacturing-card:nth-child(3) { animation-delay: 0.3s; }
-
-        .manufacturing-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: #dc2626;
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.6s ease;
+        .feature-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
         }
 
-        .manufacturing-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .manufacturing-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .card-header {
+        .feature-header {
             display: flex;
             align-items: center;
-            gap: 20px;
             margin-bottom: 24px;
         }
 
-        .icon-wrapper {
-            width: 56px;
-            height: 56px;
-            background-color: #dc2626;
+        .feature-icon {
+            width: 48px;
+            height: 48px;
             border-radius: 12px;
+            background-color: #dc2626;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
+            margin-right: 16px;
             flex-shrink: 0;
         }
 
-        .metric {
-            display: flex;
-            flex-direction: column;
-            line-height: 1;
+        .feature-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
         }
 
-        .metric-value {
-            font-size: 2rem;
-            font-weight: 800;
+        .feature-stats {
+            flex: 1;
+        }
+
+        .feature-number {
+            font-size: 1.875rem;
+            font-weight: 700;
             color: #dc2626;
+            line-height: 1;
             margin-bottom: 4px;
         }
 
-        .metric-label {
-            font-size: 0.75rem;
-            color: #999;
+        .feature-label {
+            font-size: 0.875rem;
+            color: #6b7280;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 600;
+            letter-spacing: 0.05em;
+            font-weight: 500;
         }
 
-        .manufacturing-card h3 {
+        .feature-title {
             font-size: 1.25rem;
-            font-weight: 700;
+            font-weight: 600;
             color: #1a1a1a;
-            margin-bottom: 16px;
-            line-height: 1.3;
+            margin-bottom: 12px;
         }
 
-        .manufacturing-card p {
-            font-size: 0.95rem;
-            color: #666;
+        .feature-description {
+            color: #6b7280;
             line-height: 1.6;
-        }
-
-        @media (max-width: 968px) {
-            .manufacturing-grid {
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            }
+            font-size: 0.95rem;
         }
 
         @media (max-width: 768px) {
-            .manufacturing-section {
-                padding: 60px 20px;
+            .container {
+                padding: 40px 16px;
             }
 
-            .manufacturing-header {
-                margin-bottom: 50px;
+            .header h1 {
+                font-size: 2.25rem;
             }
 
-            .manufacturing-grid {
+            .header p {
+                font-size: 1rem;
+            }
+
+            .features-grid {
                 grid-template-columns: 1fr;
-                gap: 20px;
+                gap: 24px;
+                margin-bottom: 40px;
             }
 
-            .manufacturing-card {
-                padding: 30px 25px;
+            .feature-card {
+                padding: 28px 24px;
             }
 
-            .card-header {
-                gap: 15px;
+            .feature-header {
+                margin-bottom: 20px;
             }
 
-            .metric-value {
-                font-size: 1.5rem;
+            .feature-number {
+                font-size: 1.625rem;
             }
         }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Advanced Manufacturing Excellence</h1>
+            <p>State-of-the-art production facility combining precision engineering with rigorous quality control. Every hidden door undergoes comprehensive testing to ensure European standards compliance and long-term performance reliability.</p>
+        </div>
 
-        /* Factory Section Styles */
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-header">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <div class="feature-stats">
+                        <div class="feature-number">Hundreds</div>
+                        <div class="feature-label">UNITS/MONTH</div>
+                    </div>
+                </div>
+                <h3 class="feature-title">Advanced Production Lines</h3>
+                <p class="feature-description">Automated CNC machining centers and precision assembly stations ensuring consistent dimensional accuracy and superior finish quality across all product lines.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-header">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M7 4V2C7 1.45 7.45 1 8 1H16C16.55 1 17 1.45 17 2V4H20C20.55 4 21 4.45 21 5S20.55 6 20 6H19V19C19 20.1 18.1 21 17 21H7C5.9 21 5 20.1 5 19V6H4C3.45 6 3 5.55 3 5S3.45 4 4 4H7ZM9 3V4H15V3H9ZM7 6V19H17V6H7Z"/>
+                            <path d="M9 8V17H11V8H9ZM13 8V17H15V8H13Z"/>
+                        </svg>
+                    </div>
+                    <div class="feature-stats">
+                        <div class="feature-number">25%</div>
+                        <div class="feature-label">SCALABILITY</div>
+                    </div>
+                </div>
+                <h3 class="feature-title">Flexible Production Capacity</h3>
+                <p class="feature-description">Scalable manufacturing processes accommodating both high-volume orders and urgent deliveries. Quick ramp-up capabilities for growing distribution partnerships.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-header">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <div class="feature-stats">
+                        <div class="feature-number">100%</div>
+                        <div class="feature-label">CUSTOM</div>
+                    </div>
+                </div>
+                <h3 class="feature-title">Bespoke Manufacturing Solutions</h3>
+                <p class="feature-description">In-house design and engineering team creating unique solutions for architectural challenges. Custom sizing, finishes, and hardware integration capabilities.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<!-- Block 5 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LanDoor Door Factory</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
         .factory-section {
             padding: 80px 20px;
             background-color: #f8f8f8;
-            position: relative;
         }
 
-        .factory-container {
-            max-width: 1400px;
+        .container {
+            max-width: 1200px;
             margin: 0 auto;
-            display: flex;
-            align-items: stretch;
-            gap: 60px;
-            position: relative;
         }
 
-        .factory-content {
-            flex: 1;
-            padding-right: 40px;
+        .content-wrapper {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-        }
-
-        .factory-header {
-            margin-bottom: 40px;
-        }
-
-        .factory-header h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #1a1a1a;
-            line-height: 1.2;
-            position: relative;
-        }
-
-        .factory-text p {
-            font-size: 1rem;
-            line-height: 1.8;
-            color: #555;
-            margin-bottom: 20px;
-            text-align: justify;
-        }
-
-        .factory-text p:last-child {
-            margin-bottom: 0;
-        }
-
-        .factory-images {
-            flex: 1;
-            display: flex;
-            gap: 30px;
             align-items: center;
-            position: relative;
+            text-align: center;
         }
 
-        .factory-image-left {
-            flex: 0.45;
-            position: relative;
-            z-index: 2;
+        .text-content {
+            max-width: 700px;
+            margin-bottom: 60px;
         }
 
-        .factory-image-right {
-            flex: 0.55;
-            position: relative;
+        .section-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 30px;
+            line-height: 1.2;
         }
 
-        .factory-image-left img,
-        .factory-image-right img {
+        .description {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .images-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            max-width: 1000px;
             width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 0;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
-        .factory-image-left::before {
-            content: '';
-            position: absolute;
-            top: -20px;
-            left: -20px;
-            right: 20px;
-            bottom: 20px;
-            border: 2px solid #e0e0e0;
-            z-index: -1;
+        .image-item {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            background-color: #fff;
+            height: 400px;
         }
 
-        .factory-image-right::before {
-            content: '';
-            position: absolute;
-            top: -20px;
-            left: -20px;
-            right: 20px;
-            bottom: 20px;
-            border: 2px solid #e0e0e0;
-            z-index: -1;
+        .image-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
         }
 
-        @media (max-width: 1200px) {
-            .factory-container {
-                flex-direction: column;
-                gap: 40px;
-            }
-
-            .factory-content {
-                padding-right: 0;
-            }
-
-            .factory-images {
-                flex-direction: row;
-            }
+        .image-item:hover img {
+            transform: scale(1.05);
         }
 
         @media (max-width: 768px) {
             .factory-section {
-                padding: 60px 20px;
+                padding: 50px 20px;
             }
 
-            .factory-header h2 {
+            .section-title {
                 font-size: 2rem;
+                margin-bottom: 20px;
             }
 
-            .factory-images {
+            .text-content {
+                margin-bottom: 40px;
+            }
+
+            .description {
+                font-size: 0.95rem;
+            }
+
+            .images-container {
                 flex-direction: column;
-                gap: 20px;
+                gap: 15px;
             }
 
-            .factory-image-left,
-            .factory-image-right {
-                flex: 1;
-            }
-
-            .factory-image-left::before,
-            .factory-image-right::before {
-                display: none;
+            .image-item {
+                height: 300px;
             }
         }
+    </style>
+</head>
+<body>
+    <section class="factory-section">
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="text-content">
+                    <h2 class="section-title">LanDoor Door Factory</h2>
+                    <p class="description">
+                        LANDOOR is an interior door factory that has been operating in Lviv since 2009. Interior doors are an integral functional part of home decor. We manufacture flawless products that have proven themselves on the market over 13 years of operation. Our semi-automated production line allows us to fulfill orders efficiently and on time.
+                    </p>
+                    <p class="description">
+                        Our employees have extensive experience in the manufacture and sale of interior doors. Therefore, every customer, regardless of the size of the order, receives our utmost attention, and we do everything possible to make working with us as comfortable as possible.
+                    </p>
+                </div>
+                <div class="images-container">
+                    <div class="image-item">
+                        <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdM27ML_v48ofUUCXlrxUejzOWdZMNJrgcuV0gH3NHzXO64pVfbgm8HZJ1QAG4rg0Vszbu-cGfYXxUBjIa6MTD4g0Ho5TRABQHQRugAxfvMBg9wtI46gjDYqT-gAA7QSyLLI1Sp?key=fORp2hNrEtOhe1H7p_VT1g" alt="LanDoor hidden door">
+                    </div>
+                    <div class="image-item">
+                        <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXeNiFC1WIVQbk3eISbRtQKINvWoLfkHrsHZRoHDbZWXoaOt9C7BC-hB14CQw3c5I3zQ_P3HBU-RGQEer4epQkVDqg28XxAJOLoyrtl9VSy2ukm4619P3AbQ8laoMUN3v_RF4yQ?key=fORp2hNrEtOhe1H7p_VT1g" alt="LanDoor interior design">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+<!-- Block 6 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profitable Partnership Opportunities</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        /* Partnership Section Styles */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+        }
+
         .partnership-section {
             padding: 100px 20px;
-            background-color: white;
+            background-color: #ffffff;
         }
 
-        .partnership-container {
+        .container {
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        .partnership-header {
+        .section-header {
             text-align: center;
             margin-bottom: 80px;
         }
 
-        .partnership-header h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
+        .section-title {
+            font-size: 3.5rem;
             font-weight: 800;
-            color: #1a1a1a;
+            color: #000;
             margin-bottom: 30px;
-            line-height: 1.2;
+            line-height: 1.1;
         }
 
-        .partnership-subtitle {
+        .section-subtitle {
             font-size: 1.125rem;
+            line-height: 1.6;
             color: #666;
-            line-height: 1.8;
-            max-width: 900px;
+            max-width: 700px;
             margin: 0 auto;
         }
 
-        .partnership-grid {
+        .features-row {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
         }
 
-        .partnership-card {
+        .feature-card {
             background: #fafafa;
-            padding: 40px 35px;
-            border-radius: 16px;
+            border-radius: 20px;
+            padding: 50px 40px;
+            text-align: left;
             transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            border: 1px solid #f0f0f0;
         }
 
-        .partnership-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: #dc2626;
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.6s ease;
-        }
-
-        .partnership-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .partnership-card:hover {
+        .feature-card:hover {
+            background: #f5f5f5;
             transform: translateY(-5px);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-            background: white;
         }
 
-        .partnership-card .card-header {
+        .feature-header {
             display: flex;
             align-items: center;
             gap: 20px;
-            margin-bottom: 24px;
+            margin-bottom: 30px;
         }
 
-        .partnership-card .icon-wrapper {
-            width: 56px;
-            height: 56px;
-            background-color: #dc2626;
-            border-radius: 12px;
+        .icon-box {
+            width: 70px;
+            height: 70px;
+            background: #e53935;
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
             flex-shrink: 0;
         }
 
-        .partnership-card .metric {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
+        .icon-box svg {
+            width: 35px;
+            height: 35px;
+            color: white;
+        }
+
+        .feature-meta {
+            flex: 1;
+        }
+
+        .feature-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #999;
+            margin-bottom: 5px;
+        }
+
+        .feature-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #e53935;
             line-height: 1;
         }
 
-        .partnership-card .metric-label {
-            font-size: 0.75rem;
-            color: #999;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-
-        .partnership-card .metric-value {
-            font-size: 2rem;
-            font-weight: 800;
-            color: #dc2626;
-        }
-
-        .partnership-card h3 {
-            font-size: 1.25rem;
+        .feature-title {
+            font-size: 1.5rem;
             font-weight: 700;
-            color: #1a1a1a;
-            margin-bottom: 16px;
+            color: #000;
+            margin-bottom: 20px;
             line-height: 1.3;
         }
 
-        .partnership-card p {
-            font-size: 0.95rem;
-            color: #666;
+        .feature-description {
+            font-size: 1rem;
             line-height: 1.6;
+            color: #666;
+        }
+
+        @media (max-width: 1024px) {
+            .features-row {
+                gap: 40px;
+            }
+
+            .feature-card {
+                padding: 40px 30px;
+            }
         }
 
         @media (max-width: 768px) {
@@ -938,743 +1183,620 @@
                 padding: 60px 20px;
             }
 
-            .partnership-header {
-                margin-bottom: 50px;
+            .section-title {
+                font-size: 2.5rem;
             }
 
-            .partnership-grid {
+            .features-row {
                 grid-template-columns: 1fr;
-                gap: 20px;
+                gap: 30px;
             }
 
-            .partnership-card {
-                padding: 30px 25px;
-            }
-        }
-
-        /* Our Work Section Styles */
-        .work-section {
-            padding: 120px 20px;
-            background: linear-gradient(180deg, #ffffff 0%, #f8f8f8 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .work-section::before {
-            content: '';
-            position: absolute;
-            top: -100px;
-            left: -100px;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(220, 38, 38, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-
-        .work-section::after {
-            content: '';
-            position: absolute;
-            bottom: -150px;
-            right: -150px;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(220, 38, 38, 0.08) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-
-        .work-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        .work-header {
-            text-align: center;
-            margin-bottom: 80px;
-            position: relative;
-        }
-
-        .work-header h2 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 800;
-            color: #1a1a1a;
-            line-height: 1.2;
-            position: relative;
-            display: inline-block;
-            letter-spacing: -2px;
-            text-transform: uppercase;
-            background: linear-gradient(135deg, #1a1a1a 0%, #dc2626 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .work-header h2::after {
-            content: '';
-            position: absolute;
-            bottom: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 120px;
-            height: 5px;
-            background: linear-gradient(90deg, transparent, #dc2626, transparent);
-            border-radius: 3px;
-        }
-
-        .work-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            perspective: 1000px;
-        }
-
-        .work-item {
-            position: relative;
-            overflow: hidden;
-            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            cursor: pointer;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transform-style: preserve-3d;
-        }
-
-        .work-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, rgba(220, 38, 38, 0.9) 0%, rgba(185, 28, 28, 0.9) 100%);
-            opacity: 0;
-            transition: opacity 0.5s ease;
-            z-index: 1;
-        }
-
-        .work-item::after {
-            content: 'View Project';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 1.25rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-            z-index: 2;
-            text-transform: uppercase;
-        }
-
-        .work-item:hover::before,
-        .work-item:hover::after {
-            opacity: 1;
-        }
-
-        .work-item img {
-            width: 100%;
-            height: 450px;
-            object-fit: cover;
-            display: block;
-            transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .work-item:hover {
-            transform: translateY(-10px) rotateX(5deg);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
-        }
-
-        .work-item:hover img {
-            transform: scale(1.2);
-        }
-
-        /* Stagger animation on load */
-        .work-item {
-            opacity: 0;
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
-
-        .work-item:nth-child(1) { animation-delay: 0.1s; }
-        .work-item:nth-child(2) { animation-delay: 0.2s; }
-        .work-item:nth-child(3) { animation-delay: 0.3s; }
-        .work-item:nth-child(4) { animation-delay: 0.4s; }
-
-        @media (min-width: 1200px) {
-            .work-grid {
-                grid-template-columns: repeat(4, 1fr);
-            }
-        }
-
-        @media (max-width: 968px) {
-            .work-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
+            .feature-card {
+                padding: 35px 25px;
             }
 
-            .work-item img {
-                height: 350px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .work-section {
-                padding: 60px 20px;
-            }
-
-            .work-header {
-                margin-bottom: 40px;
-            }
-
-            .work-header h2::before {
-                display: none;
-            }
-
-            .work-grid {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-
-            .work-item img {
-                height: 300px;
+            .feature-value {
+                font-size: 2rem;
             }
         }
     </style>
 </head>
 <body>
-    <section class="hero-section">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="logo-placeholder"></div>
-                <h1>Premium <span class="highlight">Hidden Doors</span><br>for European Markets</h1>
-                <p class="subtitle">
-                    Ukrainian manufacturer delivering architectural innovation to Europe. CE-certified products, reliable supply chains, and dedicated partnership support for distributors and construction professionals.
-                </p>
-                <div class="cta-buttons">
-                    <a href="#" class="btn btn-primary">
-                        <span>👤</span> Become a Partner
-                    </a>
-                    <a href="#" class="btn btn-secondary">
-                        <span>📁</span> Download Product Catalog
-                    </a>
-                </div>
-                <p class="tagline">Crafted in Ukraine. Trusted in Europe.</p>
-            </div>
-            <div class="hero-image">
-                <div class="image-container">
-                    <div class="ce-badge">CE Certified</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Manufacturing Excellence Section -->
-    <section class="excellence-section">
-        <div class="excellence-container">
-            <div class="excellence-header">
-                <h2>Manufacturing Excellence Since 2009</h2>
-                <p class="excellence-subtitle">
-                    Over 15 years of precision manufacturing in Ukraine, delivering premium hidden door solutions<br>
-                    to European markets with unwavering quality standards and export expertise.
-                </p>
-            </div>
-
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="3" width="18" height="18" rx="2"/>
-                            <line x1="3" y1="9" x2="21" y2="9"/>
-                            <line x1="3" y1="15" x2="21" y2="15"/>
-                            <line x1="9" y1="9" x2="9" y2="21"/>
-                            <line x1="15" y1="9" x2="15" y2="21"/>
-                        </svg>
-                    </div>
-                    <h3>15+ Years Market Experience</h3>
-                    <p>Established in 2009, serving premium segment with consistent innovation and reliability in hidden door manufacturing.</p>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"/>
-                            <polyline points="16 12 12 8 8 12"/>
-                            <line x1="12" y1="16" x2="12" y2="8"/>
-                        </svg>
-                    </div>
-                    <h3>CE & ISO 9001 Certified</h3>
-                    <p>Full European compliance with CE marking and ISO 9001:2015 quality management, ensuring seamless market entry across EU.</p>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-                        </svg>
-                    </div>
-                    <h3>200+ Premium Projects Delivered</h3>
-                    <p>Trusted by architects and developers across Europe for luxury residential, hospitality, and commercial hidden door installations.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section class="portfolio-section">
-        <div class="portfolio-container">
-            <div class="portfolio-header">
-                <h2>Premium Projects Portfolio</h2>
-                <p class="portfolio-subtitle">
-                    From luxury residences to prestigious commercial spaces, Landoor's hidden doors transform<br>
-                    architectural visions into seamless reality. Over 200 successful installations across Europe<br>
-                    demonstrating exceptional quality and design innovation.
-                </p>
-            </div>
-
-            <div class="portfolio-grid">
-                <div class="portfolio-item tall">
-                    <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXc6i3XarzM6VFKz9S7Kecz2qVNBclfdIqEFuvS9gGKBODcJT6UaL_TFEYiUWBL1er5SwkKLXhNgtWhcpNyzFFDkSyXvLq8SeLTAbMUs9a6uuJTMpKj3K0v7-9PnLBTFCELirki9?key=8TjZQuUu3R01cnY0MuU6Nw" alt="Hidden door project 1">
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXe8bhfFr0M_W7UIRzDzV4Ow7vjNStDPNKBGSJ3woU8so0z8Bh5rO8JInukapajuhpKeLlQibYUzpRZiMuXgd7_-YdEr4gKoZEifwiUIDzjzlkr2Xkw6m4aV8F6m3zDZ_S1VM0xL?key=8TjZQuUu3R01cnY0MuU6Nw" alt="Hidden door project 2">
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXf8g92TSYY_YjlRhRDzwUcpVeSKdo-kJ5IgTr-9SQf6IYLsQj_6xwllJBQ6Fz8FqYe2e3BCmE82fOOx0eH0DzdwwMiZC3LulGoLZlEKfe8QEBpOLdSz_tfShIv98FcPrBQvSo51?key=8TjZQuUu3R01cnY0MuU6Nw" alt="Hidden door project 3">
-                </div>
-                <div class="portfolio-item tall">
-                    <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXe3u6sPyseu6INBsb2Yg_F92zLSJYVT5bndZYp33PQVvhfb5LIqd_NGl_si0YrOgbAL29ov4MlSBcgJwnvwjjnSS5u6L9y2uyLXV-KQ_ntD14yHzHijaoeaOb9gPSGV7S1Nepgm?key=8TjZQuUu3R01cnY0MuU6Nw" alt="Hidden door project 4">
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdy5HJ4Je9DKp_WIuyW_R6_aqHR2hOFjlF3QTHcGKErS5aBV4AEIgw0FaFZRGGXvmwvxE7D_Z1bggDsWplSZ8wiBV-_NxBKIZelswjhfjWxgganZqquxHbNbXBXY9mzuzMxJSg_?key=8TjZQuUu3R01cnY0MuU6Nw" alt="Hidden door project 5">
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXevaEHEsqgA2qoZtoM1Qlgvc_q8ebXC8jZo8lg0z8mDchn5WgAlnLZ7igEVCCxUeoiVeWWidXgmMITQ7iVpyYultD1fOxXJ-P0G8YV4Hw3dlzSaUYqXUcxCxekDj5Cn_QotnXZh?key=8TjZQuUu3R01cnY0MuU6Nw" alt="Hidden door project 6">
-                </div>
-                <div class="portfolio-item wide">
-                    <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdThhD-OHVSeDsczp372MVaBKVsBNahv5yGojDcjUw_qTmFt-3qIquUe_gTD7NjzgPDCM2EHBw_LQt4YGk6252TDzDzNB0sBFlqyGKUvvc1CJjP-Q1wtE4I-9BXbC-rY6jK2iZp?key=8TjZQuUu3R01cnY0MuU6Nw" alt="Hidden door project 7">
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdjCLcBtdz9_Aqjbi8whYhm1XkHt4881E2XVd-HEvepvgwLBkikptR0883DLQNR0d2-VQN9zWPPFE9JvYXkLoWGPQdjIo5PfY1lPeRIHHm3L-IFwY7M993MzDZzSIaTpWw83RcT?key=8TjZQuUu3R01cnY0MuU6Nw" alt="Hidden door project 8">
-                </div>
-                <div class="portfolio-item wide">
-                    <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdBuJ_HYq3n6gNUdnOYc_Cz7sd14I-LJbrlhDWvx4lTjed50Upyd8CWnsB59dMAat2YNmicQbosRg5aq_U0tO7VgMMrTtEm_ITr4vcbt4607wNFN9N05E1q6oPW9tjjwUSpzd0O?key=8TjZQuUu3R01cnY0MuU6Nw" alt="Hidden door project 9">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Advanced Manufacturing Section -->
-    <section class="manufacturing-section">
-        <div class="manufacturing-container">
-            <div class="manufacturing-header">
-                <h2>Advanced Manufacturing Excellence</h2>
-                <p class="manufacturing-subtitle">
-                    State-of-the-art production facility combining precision engineering with rigorous quality<br>
-                    control. Every hidden door undergoes comprehensive testing to ensure European standards<br>
-                    compliance and long-term performance reliability.
-                </p>
-            </div>
-
-            <div class="manufacturing-grid">
-                <div class="manufacturing-card">
-                    <div class="card-header">
-                        <div class="icon-wrapper">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M20 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2Z"/>
-                                <path d="M12 7V3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4"/>
-                                <path d="M8 7V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v2"/>
-                                <line x1="12" y1="11" x2="12" y2="17"/>
-                            </svg>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-value">ISO</span>
-                            <span class="metric-label">9001:2015</span>
-                        </div>
-                    </div>
-                    <h3>Comprehensive Quality Control</h3>
-                    <p>Multi-stage inspection protocols including material verification, dimensional checks, and operational testing. Zero-defect commitment with full traceability documentation.</p>
-                </div>
-
-                <div class="manufacturing-card">
-                    <div class="card-header">
-                        <div class="icon-wrapper">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-                            </svg>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-value">CE</span>
-                            <span class="metric-label">CERTIFIED</span>
-                        </div>
-                    </div>
-                    <h3>Certified Materials & Standards</h3>
-                    <p>Premium European hardware, FSC-certified timber, and powder-coated steel components. Full CE marking compliance with comprehensive technical documentation.</p>
-                </div>
-
-                <div class="manufacturing-card">
-                    <div class="card-header">
-                        <div class="icon-wrapper">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                                <path d="M12 12v5"/>
-                            </svg>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-value">100%</span>
-                            <span class="metric-label">CUSTOM</span>
-                        </div>
-                    </div>
-                    <h3>Bespoke Manufacturing Solutions</h3>
-                    <p>In-house design and engineering team creating unique solutions for architectural challenges. Custom sizing, finishes, and hardware integration capabilities.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Door Factory Section -->
-    <section class="factory-section">
-        <div class="factory-container">
-            <div class="factory-content">
-                <div class="factory-header">
-                    <h2>LanDoor Door Factory</h2>
-                </div>
-                <div class="factory-text">
-                    <p>LANDOOR is an interior door factory that has been operating in Lviv since 2009. Interior doors are an integral functional part of home decor. We manufacture flawless products that have proven themselves on the market over 13 years of operation. Our semi-automated production line allows us to fulfill orders efficiently and on time.</p>
-                    <p>Our employees have extensive experience in the manufacture and sale of interior doors. Therefore, every customer, regardless of the size of the order, receives our utmost attention, and we do everything possible to make working with us as comfortable as possible.</p>
-                </div>
-            </div>
-            <div class="factory-images">
-                <div class="factory-image-left">
-                    <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdM27ML_v48ofUUCXlrxUejzOWdZMNJrgcuV0gH3NHzXO64pVfbgm8HZJ1QAG4rg0Vszbu-cGfYXxUBjIa6MTD4g0Ho5TRABQHQRugAxfvMBg9wtI46gjDYqT-gAA7QSyLLI1Sp?key=fORp2hNrEtOhe1H7p_VT1g" alt="LanDoor hidden door">
-                </div>
-                <div class="factory-image-right">
-                    <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXeNiFC1WIVQbk3eISbRtQKINvWoLfkHrsHZRoHDbZWXoaOt9C7BC-hB14CQw3c5I3zQ_P3HBU-RGQEer4epQkVDqg28XxAJOLoyrtl9VSy2ukm4619P3AbQ8laoMUN3v_RF4yQ?key=fORp2hNrEtOhe1H7p_VT1g" alt="LanDoor interior">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Partnership Opportunities Section -->
     <section class="partnership-section">
-        <div class="partnership-container">
-            <div class="partnership-header">
-                <h2>Profitable Partnership Opportunities</h2>
-                <p class="partnership-subtitle">
-                    Join Europe's fastest-growing hidden door network with comprehensive partner support<br>
-                    designed for sustainable business growth. From attractive margins to exclusive territories, we<br>
-                    invest in your success.
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Profitable Partnership Opportunities</h2>
+                <p class="section-subtitle">
+                    Join Europe's fastest-growing hidden door network with comprehensive partner support designed for sustainable business growth. From attractive margins to exclusive territories, we invest in your success.
                 </p>
             </div>
 
-            <div class="partnership-grid">
-                <div class="partnership-card">
-                    <div class="card-header">
-                        <div class="icon-wrapper">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            <div class="features-row">
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L13.09 8.26L19 7L15.45 11.82L21.18 15.45L14.82 16.55L16.09 22.7L11 18.77L5.91 22.7L7.18 16.55L0.82 15.45L6.55 11.82L3 7L8.91 8.26L12 2Z" fill="currentColor"/>
                             </svg>
                         </div>
-                        <div class="metric">
-                            <span class="metric-label">SUPPORT</span>
-                            <span class="metric-value">360°</span>
+                        <div class="feature-meta">
+                            <div class="feature-label">SUPPORT</div>
+                            <div class="feature-value">360°</div>
                         </div>
                     </div>
-                    <h3>Comprehensive Marketing Support</h3>
-                    <p>Professional product catalogs, technical documentation, showroom displays, and digital marketing assets. Co-branded materials and trade show support to accelerate market penetration.</p>
+                    <h3 class="feature-title">Comprehensive Marketing Support</h3>
+                    <p class="feature-description">
+                        Professional product catalogs, technical documentation, showroom displays, and digital marketing assets. Co-branded materials and trade show support to accelerate market penetration.
+                    </p>
                 </div>
 
-                <div class="partnership-card">
-                    <div class="card-header">
-                        <div class="icon-wrapper">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="4" y="4" width="16" height="16" rx="2"/>
-                                <path d="M9 9h6v6H9z"/>
-                                <line x1="9" y1="1" x2="9" y2="4"/>
-                                <line x1="15" y1="1" x2="15" y2="4"/>
-                                <line x1="9" y1="20" x2="9" y2="23"/>
-                                <line x1="15" y1="20" x2="15" y2="23"/>
-                                <line x1="20" y1="9" x2="23" y2="9"/>
-                                <line x1="20" y1="14" x2="23" y2="14"/>
-                                <line x1="1" y1="9" x2="4" y2="9"/>
-                                <line x1="1" y1="14" x2="4" y2="14"/>
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM11 7H13V9H11V7ZM11 11H13V17H11V11Z" fill="currentColor"/>
                             </svg>
                         </div>
-                        <div class="metric">
-                            <span class="metric-label">TRAINING</span>
-                            <span class="metric-value">24/7</span>
+                        <div class="feature-meta">
+                            <div class="feature-label">TRAINING</div>
+                            <div class="feature-value">24/7</div>
                         </div>
                     </div>
-                    <h3>Expert Training & Technical Guidance</h3>
-                    <p>Comprehensive installation training, product certification programs, and ongoing technical support. Access to engineering team for complex projects and custom solutions guidance.</p>
+                    <h3 class="feature-title">Expert Training & Technical Guidance</h3>
+                    <p class="feature-description">
+                        Comprehensive installation training, product certification programs, and ongoing technical support. Access to engineering team for complex projects and custom solutions guidance.
+                    </p>
                 </div>
 
-                <div class="partnership-card">
-                    <div class="card-header">
-                        <div class="icon-wrapper">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                                <circle cx="12" cy="10" r="3"/>
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22S19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="currentColor"/>
                             </svg>
                         </div>
-                        <div class="metric">
-                            <span class="metric-label">EXCLUSIVE</span>
-                            <span class="metric-value">100%</span>
+                        <div class="feature-meta">
+                            <div class="feature-label">EXCLUSIVE</div>
+                            <div class="feature-value">100%</div>
                         </div>
                     </div>
-                    <h3>Protected Territory Rights</h3>
-                    <p>Exclusive distribution rights in defined geographic territories ensuring market protection. Clear territorial boundaries with growth opportunities and expansion possibilities for proven partners.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Our Work Section -->
-    <section class="work-section">
-        <div class="work-container">
-            <div class="work-header">
-                <h2>Examples of Landoors</h2>
-            </div>
-
-            <div class="work-grid">
-                <div class="work-item">
-                    <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXe4ZOW4jwSrZvq9kYqzhlKtVIO6ond8SNJh0-dqI1zvyNnFs_8RvpjG3z7-_Mg_imdSVcyVe2hoPgbrAQhfXPQWQ7Mc102NZvl_GAOYB-mg56rSWY84HjJVWeuLB3bCIwO5pSY?key=GDAPzyzJq3rHCmdcJlSA-A" alt="LanDoor hidden door project 1">
-                </div>
-                <div class="work-item">
-                    <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcIjbyxQg5YgrZ7PXmuQ2BhNnAihz_6avn7YTktAdye5-OMqxqcqaNT3uDk4EB6HytukjRSTdyntmi9MIqFbcFzAt2Lwtc582GZZiQwEJ6ZWiQKLJN2HcJTLpBjoRhLQWX4CeRL?key=GDAPzyzJq3rHCmdcJlSA-A" alt="LanDoor hidden door project 2">
-                </div>
-                <div class="work-item">
-                    <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdf-UGreVFJ2cC4JCxEBdAPlfLi6pDNxhUT5SDGitDt11PdBHSU7QSnoXNetQON5XLrvPqXvwU7oBD4sJv0Qk9wHH09CZUKbvQ5iMtmtU96eI5I5uyRuwgSRJo_Lfca2oCck_R7?key=GDAPzyzJq3rHCmdcJlSA-A" alt="LanDoor hidden door project 3">
-                </div>
-                <div class="work-item">
-                    <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXebvETIfcsqPINI-Mpav043OIptt1PKSw14X2K5Yw_Y3bq3JV-q1lhhqR6dHD3RB69Y_J-c0T4WsoAyJtY9y_s3WDfedxm09sxgAe6oGzj0oKGyqZEP5VWy45-Df7VCREXo4dvl?key=GDAPzyzJq3rHCmdcJlSA-A" alt="LanDoor hidden door project 4">
+                    <h3 class="feature-title">Protected Territory Rights</h3>
+                    <p class="feature-description">
+                        Exclusive distribution rights in defined geographic territories ensuring market protection. Clear territorial boundaries with growth opportunities and expansion possibilities for proven partners.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 </body>
 </html>
+<!-- Block 7 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of LanDoors</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<section class="partnership-form-section" id="partnership">
-  <div class="partnership-container">
-    <h2 class="partnership-title">Start Your Partnership Today</h2>
-    <p class="partnership-subtitle">
-      Ready to expand your portfolio with premium hidden doors? Our dedicated European
-      partnership team is standing by to provide comprehensive business information,
-      technical specifications, and custom solutions tailored to your market needs.
-    </p>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+        }
 
-    <div class="partnership-grid">
-      <!-- Left Column: Direct Contact -->
-      <div class="direct-contact">
-        <h3>Direct Contact</h3>
+        .examples-section {
+            padding: 100px 20px;
+            background-color: #ffffff;
+        }
 
-        <div class="contact-item">
-          <span class="contact-icon">📞</span>
-          <div>
-            <p class="contact-label">European Sales</p>
-            <a href="tel:+380676724566">+380 67 672 4566</a>
-          </div>
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #000;
+            line-height: 1.1;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title .examples {
+            color: #000;
+        }
+
+        .section-title .landoors {
+            color: #e53935;
+        }
+
+        .underline {
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: #e53935;
+            border-radius: 2px;
+        }
+
+        .examples-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .example-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            height: 450px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .example-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .example-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .example-item:hover img {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 1024px) {
+            .examples-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            .example-item {
+                height: 350px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .examples-section {
+                padding: 60px 20px;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .examples-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .example-item {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="examples-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="examples">EXAMPLES OF </span><span class="landoors">LANDOORS</span>
+                    <div class="underline"></div>
+                </h2>
+            </div>
+
+            <div class="examples-grid">
+                <div class="example-item">
+                    <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXe4ZOW4jwSrZvq9kYqzhlKtVIO6ond8SNJh0-dqI1zvyNnFs_8RvpjG3z7-_Mg_imdSVcyVe2hoPgbrAQhfXPQWQ7Mc102NZvl_GAOYB-mg56rSWY84HjJVWeuLB3bCIwO5pSY?key=GDAPzyzJq3rHCmdcJlSA-A" alt="LanDoor example 1">
+                </div>
+                <div class="example-item">
+                    <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcIjbyxQg5YgrZ7PXmuQ2BhNnAihz_6avn7YTktAdye5-OMqxqcqaNT3uDk4EB6HytukjRSTdyntmi9MIqFbcFzAt2Lwtc582GZZiQwEJ6ZWiQKLJN2HcJTLpBjoRhLQWX4CeRL?key=GDAPzyzJq3rHCmdcJlSA-A" alt="LanDoor example 2">
+                </div>
+                <div class="example-item">
+                    <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdf-UGreVFJ2cC4JCxEBdAPlfLi6pDNxhUT5SDGitDt11PdBHSU7QSnoXNetQON5XLrvPqXvwU7oBD4sJv0Qk9wHH09CZUKbvQ5iMtmtU96eI5I5uyRuwgSRJo_Lfca2oCck_R7?key=GDAPzyzJq3rHCmdcJlSA-A" alt="LanDoor example 3">
+                </div>
+                <div class="example-item">
+                    <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXebvETIfcsqPINI-Mpav043OIptt1PKSw14X2K5Yw_Y3bq3JV-q1lhhqR6dHD3RB69Y_J-c0T4WsoAyJtY9y_s3WDfedxm09sxgAe6oGzj0oKGyqZEP5VWy45-Df7VCREXo4dvl?key=GDAPzyzJq3rHCmdcJlSA-A" alt="LanDoor example 4">
+                </div>
+            </div>
         </div>
+    </section>
+</body>
+</html>
+<!-- Block 9 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Your Partnership Today</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        <div class="contact-item">
-          <span class="contact-icon">✉️</span>
-          <div>
-            <p class="contact-label">Business Inquiries</p>
-            <a href="mailto:export@landoor.ua">export@landoor.ua</a>
-          </div>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        .contact-section {
+            padding: 100px 20px;
+            background-color: #f8f8f8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            line-height: 1.6;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-info h3 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 40px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .icon-box {
+            width: 50px;
+            height: 50px;
+            background: #e53935;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .icon-box svg {
+            width: 24px;
+            height: 24px;
+            color: white;
+        }
+
+        .contact-details h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 8px;
+        }
+
+        .contact-details p {
+            color: #e53935;
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+
+        .contact-details .note {
+            color: #666;
+            font-size: 0.875rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-links a {
+            color: #e53935;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        .form-section {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-section h3 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 15px;
+        }
+
+        .form-intro {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            gap: 20px;
+        }
+
+        .form-group .form-field {
+            flex: 1;
+        }
+
+        .form-field label {
+            display: block;
+            color: #666;
+            font-size: 0.875rem;
+            margin-bottom: 8px;
+            display: none;
+        }
+
+        .form-field input,
+        .form-field select,
+        .form-field textarea {
+            width: 100%;
+            padding: 15px 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            background-color: #fafafa;
+        }
+
+        .form-field input:focus,
+        .form-field select:focus,
+        .form-field textarea:focus {
+            outline: none;
+            border-color: #e53935;
+            background-color: white;
+        }
+
+        .form-field textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background-color: #e53935;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background-color: #c62828;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(229, 57, 53, 0.3);
+        }
+
+        @media (max-width: 1024px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact-section {
+                padding: 60px 20px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .contact-info,
+            .form-section {
+                padding: 30px;
+            }
+
+            .form-group {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Start Your Partnership Today</h2>
+                <p class="section-subtitle">
+                    Ready to expand your portfolio with premium hidden doors? Our dedicated European partnership team is standing by to provide comprehensive business information, technical specifications, and custom solutions tailored to your market needs.
+                </p>
+            </div>
+
+            <div class="content-grid">
+                <div class="contact-info">
+                    <h3>Direct Contact</h3>
+                    
+                    <div class="contact-item">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5C20.55 15.5 21 15.95 21 16.5V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>European Sales</h4>
+                            <p>+380 67 672 4566</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Business Inquiries</h4>
+                            <p>export@landoor.ua</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22S19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Showroom & Factory</h4>
+                            <p>Lviv, Ukraine</p>
+                            <p class="note">Available for European visits</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C6.48 2 2 6.48 2 12S6.48 22 12 22 22 17.52 22 12 17.52 2 12 2ZM11.99 18.93C8.69 18.93 6 16.24 6 12.93C6 12.66 6.03 12.4 6.07 12.14L8.64 14.71C8.64 16.02 10.18 17.57 11.49 17.57S13.42 17.02 13.42 15.71L15.93 18.22C14.81 18.65 13.45 18.93 11.99 18.93ZM17.89 16.33L12.06 10.5V5.57C15.36 5.57 18.03 8.24 18.03 11.54C18.03 13.38 17.23 15.04 15.93 16.21L17.89 16.33Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Connect With Us</h4>
+                            <div class="social-links">
+                                <a href="#">LinkedIn</a>
+                                <span style="color: #ccc;">|</span>
+                                <a href="#">Instagram</a>
+                                <span style="color: #ccc;">|</span>
+                                <a href="#">Facebook</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Request Partnership Information</h3>
+                    <p class="form-intro">
+                        Connect with our B2B partnership manager for detailed information about distribution opportunities, pricing, and market support in your region.
+                    </p>
+
+                    <form action="https://formspree.io/f/myzpryjy" method="POST" class="contact-form">
+                        <div class="form-group">
+                            <div class="form-field">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="company">Company Name</label>
+                                <input type="text" id="company" name="company" placeholder="Company Name" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-field">
+                                <label for="email">Business Email</label>
+                                <input type="email" id="email" name="email" placeholder="Business Email" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="market">Select Your Market</label>
+                            <select id="market" name="market" required>
+                                <option value="" disabled selected>Select Your Market</option>
+                                <option value="Poland">Poland</option>
+                                <option value="Germany">Germany</option>
+                                <option value="France">France</option>
+                                <option value="Netherlands">Netherlands</option>
+                                <option value="Belgium">Belgium</option>
+                                <option value="Austria">Austria</option>
+                                <option value="Switzerland">Switzerland</option>
+                                <option value="Czech Republic">Czech Republic</option>
+                                <option value="Slovakia">Slovakia</option>
+                                <option value="Other EU">Other EU Country</option>
+                            </select>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your business and partnership interests..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Request Partnership Information</button>
+                    </form>
+                </div>
+            </div>
         </div>
-
-        <div class="contact-item">
-          <span class="contact-icon">📍</span>
-          <div>
-            <p class="contact-label">Showroom & Factory</p>
-            <p>Lviv, Ukraine<br>Available for European visits</p>
-          </div>
-        </div>
-
-        <div class="contact-item">
-          <span class="contact-icon">🌐</span>
-          <div>
-            <p class="contact-label">Connect With Us</p>
-            <a href="#" target="_blank">LinkedIn</a>,
-            <a href="#" target="_blank">Instagram</a>,
-            <a href="#" target="_blank">Facebook</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Right Column: Form -->
-      <div class="partnership-form">
-        <h3>Request Partnership Information</h3>
-        <p class="form-subtitle">
-          Connect with our B2B partnership manager for detailed information about
-          distribution opportunities, pricing, and market support in your region.
-        </p>
-
-        <form action="#" method="post">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="text" name="company" placeholder="Company Name" required>
-          <input type="email" name="email" placeholder="Business Email" required>
-          <input type="tel" name="phone" placeholder="Phone Number" required>
-
-          <select name="market" required>
-            <option value="" disabled selected>Select Your Market</option>
-            <option value="eu">European Union</option>
-            <option value="uk">United Kingdom</option>
-            <option value="us">United States</option>
-            <option value="other">Other</option>
-          </select>
-
-          <textarea name="message" rows="4" placeholder="Tell us about your business and partnership interests..."></textarea>
-
-          <button type="submit" class="submit-btn">Request Partnership Information</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-<style>
-/* Section Wrapper */
-.partnership-form-section {
-  padding: 60px 20px;
-  background-color: #fff;
-  color: #1a1a1a;
-  font-family: "Inter", sans-serif;
-}
-
-.partnership-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.partnership-title {
-  font-size: 32px;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.partnership-subtitle {
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto 40px;
-  color: #555;
-  font-size: 16px;
-}
-
-/* Grid Layout */
-.partnership-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 40px;
-  align-items: flex-start;
-}
-
-/* Left Column */
-.direct-contact h3 {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
-.contact-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  margin-bottom: 20px;
-}
-
-.contact-icon {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  background: #e02b20;
-  color: #fff;
-  font-size: 18px;
-  border-radius: 8px;
-}
-
-.contact-label {
-  font-weight: 600;
-  margin-bottom: 4px;
-}
-
-.direct-contact a {
-  color: #e02b20;
-  font-weight: 500;
-  text-decoration: none;
-}
-.direct-contact a:hover {
-  text-decoration: underline;
-}
-
-/* Right Column */
-.partnership-form h3 {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-.form-subtitle {
-  color: #666;
-  margin-bottom: 20px;
-  font-size: 14px;
-}
-
-.partnership-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.partnership-form input,
-.partnership-form select,
-.partnership-form textarea {
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 14px;
-  width: 100%;
-  box-sizing: border-box;
-  outline: none;
-  transition: border-color 0.3s ease;
-}
-
-.partnership-form input:focus,
-.partnership-form select:focus,
-.partnership-form textarea:focus {
-  border-color: #e02b20;
-}
-
-.submit-btn {
-  background-color: #e02b20;
-  color: #fff;
-  font-weight: 600;
-  padding: 14px;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.submit-btn:hover {
-  background-color: #c62218;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .partnership-grid {
-    grid-template-columns: 1fr;
-  }
-  .partnership-title {
-    font-size: 26px;
-  }
-}
-</style>
-
-
+    </section>
+</body>
+</html>
